@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+
+        <menuitem id="menu_product_label_wizard"
+                  name="Aplicar Etiquetas a Productos"
+                  parent="sale.sale_order_menu"
+                  action="action_product_label_wizard"/>
+    </data>
+</odoo>

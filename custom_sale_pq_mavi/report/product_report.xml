@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_pdf_report_action" model="ir.actions.report">
+            <field name="name">Print Product Details</field>
+            <field name="model">product.template</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">custom_sale_pq_mavi.report_product_detail</field>
+            <field name="report_file">custom_sale_pq_mavi.report_product_detail</field>
+            <field name="print_report_name">'Product - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="product.model_product_template"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

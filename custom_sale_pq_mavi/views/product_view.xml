@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="product_template_form_view_inherit_sales_count" model="ir.ui.view">
+            <field name="name">product.template.smartbutton.sales</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+
+                <div name="button_box" position="inside">
+                    <button type="object" name="action_view_sales" class="oe_stat_button" icon="fa-shopping-cart">
+                        <field name="sale_count" widget="statinfo" string="Ventas"/>
+                    </button>
+                </div>
+
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="label_ids" widget="many2many_tags" placeholder="Seleccionar etiquetas..."/>
+                </xpath>
+
+                <xpath expr="//header" position="inside">
+                    <button name="%(product_template_pdf_report_action)d"
+                            type="action"
+                            string="Print Product Details"
+                            class="btn btn-primary"
+                            context="{'bin_size': True}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

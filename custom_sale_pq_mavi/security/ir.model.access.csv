@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+custom_sale_pq_mavi.access_product_label,access_product_label,custom_sale_pq_mavi.model_product_label,base.group_user,1,1,1,1
+custom_sale_pq_mavi.access_product_label_wizard,access_product_label_wizard,custom_sale_pq_mavi.model_product_label_wizard,base.group_user,1,1,1,1

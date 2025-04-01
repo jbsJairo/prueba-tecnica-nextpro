@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_product_detail">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="doc" t-value="doc.with_context(lang=doc.env.lang)"/>
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Product: <t t-esc="doc.name"/></h2>
+                            <p>Description: <t t-esc="doc.description_sale"/></p>
+                            <p>Product Code: <t t-esc="doc.default_code"/></p>
+                            <p>Price: <t t-esc="doc.list_price"/></p>
+                            <img t-att-src="'/web/image/product.template/%s/image_128' % doc.id" t-att-alt="doc.name" style="max-height:300px;"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+    </data>
+</odoo>
